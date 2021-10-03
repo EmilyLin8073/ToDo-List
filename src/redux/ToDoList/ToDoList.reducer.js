@@ -1,7 +1,7 @@
-import { ToDoListActionTypes } from "./todo-list.types";
+import { ToDoListActionTypes } from "./ToDoList.types";
 
 const INITIAL_STATE = {
-  toDoList: []
+  toDo: []
 };
 
 export const ToDoListReducer = (state = INITIAL_STATE, action) => {
@@ -9,7 +9,7 @@ export const ToDoListReducer = (state = INITIAL_STATE, action) => {
     case ToDoListActionTypes.SET_UPDATE_TODO_LIST:
       return {
         ...state,
-        toDoList: action.payload
+        toDo: action.payload
       };
 
     default:
