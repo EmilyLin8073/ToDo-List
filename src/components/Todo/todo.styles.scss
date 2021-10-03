@@ -1,9 +1,9 @@
 .todo-container {
-  width: 100%;
   display: flex;
   justify-content: space-between;
 
   .add-todo-button {
+    margin-left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

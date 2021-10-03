@@ -23,7 +23,7 @@ const TodoItems = () => {
               {key + 1}. {todo}
             </p>
             <div className="buttons">
-              <CustomButton>Edit</CustomButton>
+              <CustomButton style={{ marginRight: "30px" }}>Edit</CustomButton>
               <CustomButton onClick={() => onDeleteTodo(todo)} inverted>
                 Delete
               </CustomButton>

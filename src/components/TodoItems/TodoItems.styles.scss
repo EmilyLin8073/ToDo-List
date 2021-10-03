@@ -1,6 +1,5 @@
 .todo-items-and-buttons-container {
   margin-top: 50px;
-  width: 100%;
 
   .todo-item {
     display: flex;
@@ -12,7 +11,7 @@
   }
 
   .buttons {
-    width: 23%;
+    margin-left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

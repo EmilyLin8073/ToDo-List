@@ -7,7 +7,6 @@ export const initialState = {
 };
 
 export const TodoListActionTypes = {
-  //   SET_GET_TODO: "SET_GET_TODO",
   SET_ADD_TODO: "SET_ADD_TODO",
   SET_EDIT_TODO: "SET_EDIT_TODO",
   SET_DELETE_TODO: "SET_DELETE_TODO"

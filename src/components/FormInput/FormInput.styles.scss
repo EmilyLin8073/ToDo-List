@@ -10,7 +10,7 @@ $main-color: black;
 .to-do-form {
   position: relative;
   margin: 45px 0;
-  width: 85%;
+  width: calc(85vw - 130px);
 
   .form-input {
     background: none;
