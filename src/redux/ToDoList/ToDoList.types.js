@@ -1,3 +1,5 @@
-export const ToDoListActionTypes = {
-  SET_UPDATE_TODO_LIST: "SET_UPDATE_TODO_LIST"
+export const TodoListActionTypes = {
+  SET_ADD_TODO: "SET_ADD_TODO",
+  SET_EDIT_TODO: "SET_EDIT_TODO",
+  SET_DELETE_TODO: "SET_DELETE_TODO"
 };

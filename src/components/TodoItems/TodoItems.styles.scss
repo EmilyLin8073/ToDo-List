@@ -1,0 +1,21 @@
+.todo-items-and-buttons-container {
+  margin-top: 50px;
+  width: 100%;
+
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .todo-text {
+    font-size: 22px;
+  }
+
+  .buttons {
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

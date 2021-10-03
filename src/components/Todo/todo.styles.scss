@@ -1,0 +1,11 @@
+.todo-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .add-todo-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

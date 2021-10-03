@@ -1,28 +1,43 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 
 import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 
-import "./ToDoList.styles.scss";
+import "./TodoList.styles.scss";
+import { AppContext, TodoListActionTypes } from "../../context/AppContext";
 import CustomButton from "../CustomButton/CustomButton.component";
-import { selectToDo } from "../../redux/ToDoList/ToDoList.selectors";
-import { setUpdateToDoList } from "../../redux/ToDoList/ToDoList.actions";
+import { selectTodos } from "../../redux/TodoList/TodoList.selectors";
+import {
+  setAddTodo,
+  setEditTodo,
+  setDeleteTodo
+} from "../../redux/TodoList/TodoList.actions";
+import ToDo from "../Todo/Todo.component";
+import TodoItems from "../TodoItems/TodoItems.component";
 
-const ToDoList = () => {
-  const addToDoList = () => {};
+const TodoList = () => {
+  const [inputToDo, setInputToDo] = useState("");
+  const [state, dispatch] = useContext(AppContext);
+  const { todoList } = state;
+
+  console.log("toDo", todoList);
+
   return (
     <div className="todo-list-container">
-      <CustomButton onClick={addToDoList}>Add ToDo</CustomButton>
+      <ToDo inputToDo={inputToDo} setInputToDo={setInputToDo} />
+      <TodoItems />
     </div>
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  toDo: selectToDo
+const mapStateToProps = (state) => ({
+  todoList: state.todoList
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  setUpdateToDoList: (toDoList) => dispatch(setUpdateToDoList(toDoList))
+  setAddTodo: (todoList) => dispatch(setAddTodo(todoList)),
+  setEditTodo: (todoList) => dispatch(setEditTodo(todoList)),
+  setDeleteTodo: (todoList) => dispatch(setDeleteTodo(todoList))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);
+export default TodoList;

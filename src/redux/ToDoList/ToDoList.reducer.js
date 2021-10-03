@@ -1,15 +1,27 @@
-import { ToDoListActionTypes } from "./ToDoList.types";
+import { TodoListActionTypes } from "./TodoList.types";
 
 const INITIAL_STATE = {
-  toDo: []
+  todoList: []
 };
 
-export const ToDoListReducer = (state = INITIAL_STATE, action) => {
+export const TodoListReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case ToDoListActionTypes.SET_UPDATE_TODO_LIST:
+    case TodoListActionTypes.SET_ADD_TODO:
       return {
         ...state,
-        toDo: action.payload
+        todoList: state.todoList.push(action.payload)
+      };
+    case TodoListActionTypes.SET_EDIT_TODO:
+      return {
+        ...state,
+        todoList: action.payload
+      };
+    case TodoListActionTypes.SET_DELETE_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.filter(
+          (toDoItem) => toDoItem.id !== action.payload.id
+        )
       };
 
     default:
