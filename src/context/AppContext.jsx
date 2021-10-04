@@ -3,11 +3,12 @@ import React, { createContext, useReducer } from "react";
 import { editTodo } from "../utils/utils";
 
 export const initialState = {
-  todoList: []
+  todoList: [],
+  isEdting: false
 };
 
 export const TodoListActionTypes = {
-  //   SET_GET_TODO: "SET_GET_TODO",
+  SET_IS_EDTING: "SET_IS_EDTING",
   SET_ADD_TODO: "SET_ADD_TODO",
   SET_EDIT_TODO: "SET_EDIT_TODO",
   SET_DELETE_TODO: "SET_DELETE_TODO"
@@ -31,6 +32,11 @@ const reducer = (state, action) => {
         todoList: state.todoList.filter(
           (toDoItem) => toDoItem.id !== action.payload
         )
+      };
+    case TodoListActionTypes.SET_IS_EDTING:
+      return {
+        ...state,
+        isEdting: !state.isEdting
       };
 
     default:

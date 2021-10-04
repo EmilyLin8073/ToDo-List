@@ -1,12 +1,10 @@
-import { Provider } from "react-redux";
-
 import "./App.css";
+import AppProvider from "./context/AppContext";
 import Footer from "./components/footer/Footer.component";
 import TodoList from "./components/TodoList/TodoList.component";
-import { store, persistor } from "./redux/store";
-import AppProvider from "./context/AppContext.jsx";
 
 const App = () => {
+  console.log("i have rendered");
   return (
     <div className="App">
       <AppProvider>

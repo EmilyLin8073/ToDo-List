@@ -9,7 +9,6 @@ const TodoItem = ({ todoItem }) => {
   const [state, dispatch] = useContext(AppContext);
   const [isEditing, setIsEditing] = useState(false);
   const [updateTodo, setUpdateTodo] = useState("");
-  const { todoList } = state;
 
   const onDeleteTodo = (id) => {
     dispatch({ type: TodoListActionTypes.SET_DELETE_TODO, payload: id });

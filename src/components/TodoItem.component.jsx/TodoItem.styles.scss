@@ -1,16 +1,14 @@
 .todo-item {
   display: flex;
-  justify-content: space-between;
-}
+  flex-direction: column;
+  margin-bottom: 35px;
 
-.todo-text {
-  font-size: 22px;
-}
+  .todo-text {
+    font-size: 22px;
+  }
 
-.buttons {
-  margin-left: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
+  .buttons {
+    display: flex;
+    align-items: center;
+  }
 }
