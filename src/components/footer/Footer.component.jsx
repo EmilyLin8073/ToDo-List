@@ -2,6 +2,10 @@ import React from "react";
 
 import "./Footer.styles.scss";
 
+/*
+  This component is responsible to render footer
+*/
+
 const Footer = () => (
   <footer className="footer" variant="dark" fixed="bottom">
     <p className="copy-right" style={{ marginLeft: "20px" }}>

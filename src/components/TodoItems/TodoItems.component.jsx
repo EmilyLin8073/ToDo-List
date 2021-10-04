@@ -3,6 +3,10 @@ import React, { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import TodoItem from "../TodoItem.component.jsx/TodoItem.component";
 
+/*
+  This component is responsible to render all the todo items
+*/
+
 const TodoItems = () => {
   const [state, dispatch] = useContext(AppContext);
   const { todoList } = state;
