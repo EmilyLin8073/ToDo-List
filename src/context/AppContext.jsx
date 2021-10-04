@@ -1,12 +1,13 @@
 import React, { createContext, useReducer } from "react";
 
-import { deleteTodo } from "../utils/utils";
+import { editTodo } from "../utils/utils";
 
 export const initialState = {
   todoList: []
 };
 
 export const TodoListActionTypes = {
+  //   SET_GET_TODO: "SET_GET_TODO",
   SET_ADD_TODO: "SET_ADD_TODO",
   SET_EDIT_TODO: "SET_EDIT_TODO",
   SET_DELETE_TODO: "SET_DELETE_TODO"
@@ -22,12 +23,14 @@ const reducer = (state, action) => {
     case TodoListActionTypes.SET_EDIT_TODO:
       return {
         ...state,
-        todoList: action.payload
+        todoList: editTodo(state.todoList, action.payload)
       };
     case TodoListActionTypes.SET_DELETE_TODO:
       return {
         ...state,
-        todoList: deleteTodo(state.todoList, action.payload)
+        todoList: state.todoList.filter(
+          (toDoItem) => toDoItem.id !== action.payload
+        )
       };
 
     default:

@@ -1,20 +1,3 @@
-.todo-items-and-buttons-container {
+.todo-items-container {
   margin-top: 50px;
-
-  .todo-item {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .todo-text {
-    font-size: 22px;
-  }
-
-  .buttons {
-    margin-left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-  }
 }

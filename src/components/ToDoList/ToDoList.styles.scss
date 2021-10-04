@@ -3,4 +3,16 @@
   background-color: #f4d19b;
   min-height: calc(100vh - 200px);
   padding: 20px 60px;
+
+  .todo-container {
+    display: flex;
+    justify-content: space-between;
+
+    .add-todo-button {
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }

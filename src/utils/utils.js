@@ -1,9 +1,9 @@
-export const deleteTodo = (todoList, todoItem) => {
-  const index = todoList.indexOf(todoItem);
+export const editTodo = (todoList, todoItemToBeUpdate) => {
+  todoList.map((todo) =>
+    todo.id === todoItemToBeUpdate.id
+      ? (todo.text = todoItemToBeUpdate.text)
+      : todo
+  );
 
-  todoList.splice(index, 1);
-
-  const newTodoList = [...todoList];
-
-  return newTodoList;
+  return todoList;
 };
