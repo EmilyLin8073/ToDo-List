@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 
-// import "./TodoItems.styles.scss";
 import { AppContext } from "../../context/AppContext";
 import TodoItem from "../TodoItem.component.jsx/TodoItem.component";
 
