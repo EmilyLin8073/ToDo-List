@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 import { AppContext } from "../../context/AppContext";
-import TodoItem from "../TodoItem.component.jsx/TodoItem.component";
+import TodoItem from "../TodoItem/TodoItem.component";
 
 /*
   This component is responsible to render all the todo items
