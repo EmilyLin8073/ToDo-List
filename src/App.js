@@ -1,7 +1,7 @@
 import "./App.css";
 import AppProvider from "./context/AppContext";
 import Footer from "./components/footer/Footer.component";
-import TodoList from "./components/TodoList/TodoList.component";
+import TodoList from "./components/todoList/TodoList.component";
 
 const App = () => {
   return (
