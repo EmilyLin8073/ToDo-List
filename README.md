@@ -1,14 +1,7 @@
 ## ToDo List
 
-## Available Scripts
+After cloning the project, run `yarn install` to install the dependencies
 
-In the project directory, you can run:
+After installing the dependencies, you can use `yarn start` to start the application
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
+For running the test cases, use `yarn test`

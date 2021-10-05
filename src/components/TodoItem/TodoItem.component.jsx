@@ -20,6 +20,8 @@ const TodoItem = ({ todoItem }) => {
     dispatch({ type: TodoListActionTypes.SET_DELETE_TODO, payload: id });
   };
 
+  console.log("todo list", state.todoList);
+
   // Function to handle when edit button are clicked
   const onEditTodo = (todoToBeUpdate) => {
     setUpdateTodo(todoToBeUpdate.text);
